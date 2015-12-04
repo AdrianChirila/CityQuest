@@ -7,9 +7,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var colors = require('colors');
 
-var routes = require(appRoot + '/src/config/routes/index');
-var users = require(appRoot + '/src/config/routes/users');
+var url = require(appRoot + '/src/config/database')();
 
 module.exports = function(app, express) {
 
@@ -25,8 +26,19 @@ module.exports = function(app, express) {
     app.use(cookieParser());
     app.use(express.static(path.join(appRoot + '/src/public')));
 
+    var routes = require(appRoot + '/src/config/routes/index');
+    var login = require(appRoot + '/src/config/routes/login')(app);
+
     app.use('/', routes);
-    app.use('/users', users);
+    app.use('/login', login);
+
+    mongoose.connect(url, function(err) {
+        if (err) {
+            console.log('Unable to connect to the db!'.red, err);
+        } else {
+            console.log('Connect to the db!'.green);
+        }
+    });
 
     return app;
 };
