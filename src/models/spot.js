@@ -16,7 +16,7 @@ var SpotSchema = new Schema({
     lat: {
         type: Number
     },
-    long: {
+    lng: {
         type: Number
     },
     radius: {
