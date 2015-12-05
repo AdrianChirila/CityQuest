@@ -21,8 +21,8 @@ function userFixture(callback) {
             },
             {
                 _id: '41224d776a326fb40f000002',
-                email: 'jula_adrian1@yahoo.com',
-                name: 'Chirila Jula'
+                email: 'decean_ovidiu95@yahoo.com',
+                name: 'Decean Ovidiu'
             },
             {
                 _id: '41224d776a326fb40f000003',
