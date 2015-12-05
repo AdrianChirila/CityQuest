@@ -1,9 +1,7 @@
 /**
- * Created by adrianIoan on 05.12.2015.
+ * Created by adrian on 05.12.2015.
  */
-/**
- * Created by Adrian on 07/10/15.
- */
+
 'use strict';
 
 var gulp = require('gulp');

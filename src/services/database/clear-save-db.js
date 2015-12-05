@@ -16,6 +16,7 @@ var url = require(appRoot + '/src/config/database')();
 // Don't want to create a variable because the linter will
 // mark it as unused
 require(appRoot + '/src/models/user');
+require(appRoot + '/src/models/journey');
 
 function clearAndSaveDb(done) {
     async.waterfall([

@@ -11,10 +11,12 @@ var async = require('async');
 var appRoot = require('app-root-path').path;
 
 var userFixture = require(appRoot + '/src/fixtures/user-fixtures');
+var journeyFixture = require(appRoot + '/src/fixtures/journey-fixtures');
 
 var saveFixtures = function(callback) {
     async.waterfall([
-        userFixture
+        userFixture,
+        journeyFixture
     ], callback);
 };
 
