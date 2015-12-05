@@ -22,7 +22,7 @@ function userFixture(callback) {
                 distance: 900,
                 imgURL: 'http://mw2.google.com/mw-panoramio/photos/medium/4112582.jpg'
             },
-            /*{
+            {
                 _id: '41224d776a326fb40f000005',
                 name: 'Centru vechi',
                 desc: 'Enjoy a lovely day in a beautiful old place',
@@ -38,7 +38,7 @@ function userFixture(callback) {
                 duration: 44,
                 distance: 800,
                 imgURL: 'http://static2.libertatea.ro/typo3temp/pics/04-foto-2-1588_9b532b063a.jpg'
-            }*/
+            }
         ]
     }, function(err) {
         if (err) {
