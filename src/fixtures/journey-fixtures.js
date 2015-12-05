@@ -24,20 +24,19 @@ function userFixture(callback) {
             },
             {
                 _id: '41224d776a326fb40f000005',
-                name: 'Centru vechi',
-                desc: 'Enjoy a lovely day in a beautiful old place',
+                name: 'Botanical Garden',
+                desc: 'Enjoy some fresh air in a beautiful place',
                 duration: 20,
                 distance: 400,
-                imgURL: 'http://static2.libertatea.ro/typo3temp/pics/04-foto-2-1588_9b532b063a.jpg'
-
+                imgURL: 'http://calatorim.ro/wp-content/uploads/2014/07/main.jpg'
             },
             {
                 _id: '41224d776a326fb40f000006',
-                name: 'Padurea Baciu',
-                desc: 'Explore the beautifully haunted Baciu forest.',
+                name: 'Iuliuss Mall Cluj-Napoca',
+                desc: 'Spend some free time at shopping',
                 duration: 44,
                 distance: 800,
-                imgURL: 'http://static2.libertatea.ro/typo3temp/pics/04-foto-2-1588_9b532b063a.jpg'
+                imgURL: 'http://www.monitorulcj.ro//documente/stories/2015/04/08/Iulius%20Mall%20Cluj%2002.jpg'
             }
         ]
     }, function(err) {
