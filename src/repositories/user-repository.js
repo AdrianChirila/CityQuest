@@ -52,7 +52,7 @@ var userRepository = function() {
                 return
             }
 
-            return callback(null, user);
+            return callback(null, userDb);
         });
     };
 

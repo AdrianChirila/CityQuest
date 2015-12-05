@@ -28,9 +28,11 @@ module.exports = function(app, express) {
 
     var routes = require(appRoot + '/src/config/routes/index');
     var login = require(appRoot + '/src/config/routes/login')(app);
+    var journey = require(appRoot + '/src/config/routes/journey')(app);
 
     app.use('/', routes);
     app.use('/login', login);
+    app.use('/journey', journey);
 
     mongoose.connect(url, function(err) {
         if (err) {

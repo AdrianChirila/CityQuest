@@ -12,11 +12,11 @@ var colors = require('colors');
 var userController = function() {
 
     var add = function(req, res) {
-        console.log('xxx', req.body.user);
-        console.log(req.body.user.email, req.body.user.name);
+        console.log(req.body);
+        console.log(req.body.email, req.body.name);
         var user = new User({
-            email: req.body.user.email,
-            name: req.body.user.name
+            email: req.body.email,
+            name: req.body.name
         });
 
         userRepository.add(user, function(err, user) {
