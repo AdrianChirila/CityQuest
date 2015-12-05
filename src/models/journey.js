@@ -20,6 +20,9 @@ var JourneySchema = new Schema({
     },
     distance: {
         type: Number
+    },
+    imgURL: {
+      type: String
     }
 });
 

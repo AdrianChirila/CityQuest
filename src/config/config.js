@@ -32,7 +32,7 @@ module.exports = function(app, express) {
 
     app.use('/', routes);
     app.use('/login', login);
-    app.use('/journey', journey);
+    app.use('/journies', journey);
 
     mongoose.connect(url, function(err) {
         if (err) {
