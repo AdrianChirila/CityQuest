@@ -17,6 +17,7 @@ var url = require(appRoot + '/src/config/database')();
 // mark it as unused
 require(appRoot + '/src/models/user');
 require(appRoot + '/src/models/journey');
+require(appRoot + '/src/models/spot');
 
 function clearAndSaveDb(done) {
     async.waterfall([

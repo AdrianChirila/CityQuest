@@ -16,25 +16,29 @@ function userFixture(callback) {
         Journey: [
             {
                 _id: '41224d776a326fb40f000004',
-                name: 'Vila 69',
-                desc: 'Go to vila 69',
+                name: 'Cetatuie',
+                desc: 'Take a lovely walk thorught Cluj-Napoca finest hills',
                 duration: 34,
-                distance: 900
+                distance: 900,
+                imgURL: 'http://mw2.google.com/mw-panoramio/photos/medium/4112582.jpg'
             },
-            {
+            /*{
                 _id: '41224d776a326fb40f000005',
-                name: 'Road to booha',
-                desc: 'get a beer at booha bar',
+                name: 'Centru vechi',
+                desc: 'Enjoy a lovely day in a beautiful old place',
                 duration: 20,
-                distance: 400
+                distance: 400,
+                imgURL: 'http://static2.libertatea.ro/typo3temp/pics/04-foto-2-1588_9b532b063a.jpg'
+
             },
             {
                 _id: '41224d776a326fb40f000006',
-                name: 'Go to Noa',
-                desc: 'Have fun at noa',
+                name: 'Padurea Baciu',
+                desc: 'Explore the beautifully haunted Baciu forest.',
                 duration: 44,
-                distance: 800
-            }
+                distance: 800,
+                imgURL: 'http://static2.libertatea.ro/typo3temp/pics/04-foto-2-1588_9b532b063a.jpg'
+            }*/
         ]
     }, function(err) {
         if (err) {
