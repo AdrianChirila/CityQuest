@@ -20,7 +20,7 @@ var VisitedController = function() {
             }
             console.log('The visited spots were sent'.green);
 
-            return res.status(200).send(spots);
+            return res.status(200).json(spots);
         });
     };
 
@@ -38,7 +38,7 @@ var VisitedController = function() {
                 return res.status(500).send();
             }
 
-            return res.status(200).send(visitDb);
+            return res.status(200).json(visitDb);
         });
     };
 

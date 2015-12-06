@@ -27,7 +27,7 @@ var userController = function() {
             }
             console.log('THe user was sent'.green, user);
 
-            res.status(200).send(user);
+            res.status(200).json(user);
         });
     };
 

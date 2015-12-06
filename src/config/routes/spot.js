@@ -19,5 +19,7 @@ module.exports = function() {
 
     router.get('/users/:id', visitedController.getAllByUser);
 
+    router.get('/:userID/:journeyID', spotController.getAllByJourneyAndUser);
+
     return router;
 };

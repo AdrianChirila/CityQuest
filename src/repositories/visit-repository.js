@@ -8,7 +8,7 @@ var appRoot = require('app-root-path');
 var Visited = require(appRoot + '/src/models/visit');
 var colors = require('colors');
 
-var VisitedRepository = function() {
+var VisitRepository = function() {
     var getAllByUser = function(id, callback) {
         Visited.find({userID: id})
             .populate('spotID')
@@ -25,7 +25,7 @@ var VisitedRepository = function() {
         return
     };
 
-    var findVisit = function(userID, spotID, callback) {
+    var find = function(userID, spotID, callback) {
         Visited.find({userID: userID, spotID:spotID},
             function(err, visits) {
                 if (err) {
@@ -33,7 +33,7 @@ var VisitedRepository = function() {
                 }
 
                 if (visits.length === 0) {
-                    console.log('The user does not enjoy the visit'.yellow);
+                    console.log('The user does not enjoy the visit :'.yellow, spotID);
 
                     return callback(null, null);
                 }
@@ -44,7 +44,7 @@ var VisitedRepository = function() {
     };
 
     var add = function(visit, callback) {
-        findVisit(visit.userID, visit.spotID,
+        find(visit.userID, visit.spotID,
         function(err, visitDb) {
             if (err) {
                 return callback(err, null);
@@ -71,8 +71,9 @@ var VisitedRepository = function() {
 
     return {
         add: add,
-        getAllByUser: getAllByUser
+        getAllByUser: getAllByUser,
+        find: find
     }
 };
 
-module.exports = VisitedRepository();
+module.exports = VisitRepository();

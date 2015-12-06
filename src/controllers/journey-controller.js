@@ -20,7 +20,7 @@ var userController = function() {
             }
             console.log('The journies were sent!'.green);
 
-            return res.status(200).send(journies);
+            return res.status(200).json(journies);
         });
     };
 

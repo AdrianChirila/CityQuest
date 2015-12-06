@@ -25,6 +25,10 @@ function userFixture(callback) {
             {
                 userID: '41224d776a326fb40f000002',
                 spotID: '41224d776a326fb40f000029'
+            },
+            {
+                userID: '41224d776a326fb40f000001',
+                spotID: '41224d776a326fb40f000022'
             }
         ]
     }, function(err) {

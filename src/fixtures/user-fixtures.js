@@ -21,7 +21,7 @@ function userFixture(callback) {
             },
             {
                 _id: '41224d776a326fb40f000002',
-                email: 'decean_ovidiu95@yahoo.com',
+                email: 'ovidiu_decean95@yahoo.com',
                 name: 'Decean Ovidiu'
             },
             {

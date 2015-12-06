@@ -11,7 +11,8 @@ var ObjectId = Schema.ObjectId;
 
 var SpotSchema = new Schema({
     journeyID: {
-        type: ObjectId
+        type: ObjectId,
+        ref: 'Journey'
     },
     lat: {
         type: Number
