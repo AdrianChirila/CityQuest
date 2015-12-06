@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
-var VisitedSchema = new Schema({
+var VisitSchema = new Schema({
     userID: {
         type: ObjectId,
         ref: 'User'
@@ -20,4 +20,4 @@ var VisitedSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Visited', VisitedSchema);
+module.exports = mongoose.model('Visit', VisitSchema);

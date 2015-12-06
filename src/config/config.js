@@ -30,11 +30,13 @@ module.exports = function(app, express) {
     var login = require(appRoot + '/src/config/routes/login')(app);
     var journey = require(appRoot + '/src/config/routes/journey')(app);
     var spot = require(appRoot + '/src/config/routes/spot')(app);
+    var visits = require(appRoot + '/src/config/routes/visits')(app);
 
     app.use('/', routes);
     app.use('/login', login);
     app.use('/journies', journey);
     app.use('/spots', spot);
+    app.use('/visits', visits);
 
     mongoose.connect(url, function(err) {
         if (err) {
