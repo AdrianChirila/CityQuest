@@ -33,8 +33,6 @@ var VisitRepository = function() {
                 }
 
                 if (visits.length === 0) {
-                    console.log('The user does not enjoy the visit :'.yellow, spotID);
-
                     return callback(null, null);
                 }
                 console.log('The user already mark the visit!'.yellow);

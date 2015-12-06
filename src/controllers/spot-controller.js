@@ -9,7 +9,6 @@ var colors = require('colors');
 
 var SpotController = function() {
     var getAllByJourney = function(req, res) {
-        console.log(req.params);
         spotRepository.getAllByJourney(req.params.id,
             function(err, spots) {
             if (err) {
@@ -24,15 +23,6 @@ var SpotController = function() {
     };
 
     var getAllByJourneyAndUser = function(req, res) {
-        console.log('params:'.yellow, req.params);
-        var ObjectId = require('mongoose').Types.ObjectId;
-        console.log(ObjectId.isValid(req.params.userID));
-        console.log(ObjectId.isValid(req.params.journeyID));
-
-        //var userIDObj = new ObjectId(req.params.userID);
-        //var journeyIDObj = new ObjectId(req.params.journeyID);
-
-        console.log('params'.yellow, req.params.userID, req.params.journeyID);
        spotRepository.getAllByJourneyAndUser(req.params.userID,
        req.params.journeyID, function(err, markSpots) {
                if (err) {
@@ -40,11 +30,7 @@ var SpotController = function() {
 
                    return res.status(500).send();
                }
-               console.log('The marked spots were sent!'.green,
-               markSpots.length);
-               //console.log(markSpots);
-
-               //markSpots[0].visited = true;
+               console.log('The marked spots were sent!'.green);
 
                return res.status(200).json(markSpots);
            });
