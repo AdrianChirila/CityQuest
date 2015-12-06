@@ -6,7 +6,8 @@
 
 var appRoot = require('app-root-path');
 var visitedRepository = require(appRoot +
-    '/src/repositories/visited-repository');
+    '/src/repositories/visit-repository');
+var Visit = require(appRoot + '/src/models/visit');
 
 var VisitedController = function() {
     var getAllByUser = function(req, res) {
@@ -23,7 +24,26 @@ var VisitedController = function() {
         });
     };
 
+    var add = function(req, res) {
+        console.log(req.body);
+        var visit = new Visit({
+            userID: req.body.userID,
+            spotID: req.body.spotID
+        });
+
+        visitedRepository.add(visit, function(err, visitDb) {
+            if (err) {
+                console.log('Could not save the visit!'.red, err);
+
+                return res.status(500).send();
+            }
+
+            return res.status(200).send(visitDb);
+        });
+    };
+
     return {
+        add: add,
         getAllByUser: getAllByUser
     }
 };

@@ -25,7 +25,7 @@ var SpotSchema = new Schema({
     info: {
         type: String
     },
-    imgURL: {
+    imgUrl: {
         type: String
     },
     name: {

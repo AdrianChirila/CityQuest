@@ -9,7 +9,7 @@ var express = require('express');
 var router = express.Router();
 
 var visitedController =
-    require(appRoot + '/src/controllers/visited-controller');
+    require(appRoot + '/src/controllers/visit-controller');
 
 var spotController =
     require(appRoot + '/src/controllers/spot-controller');
@@ -18,5 +18,6 @@ module.exports = function() {
     router.get('/journey/:id', spotController.getAllByJourney);
 
     router.get('/users/:id', visitedController.getAllByUser);
+
     return router;
 };
