@@ -8,8 +8,8 @@ var fixtures = require('node-mongoose-fixtures');
 var colors = require('colors');
 
 function userFixture(callback) {
-    fixtures.save('Visited', {
-        Visited: [
+    fixtures.save('Visit', {
+        Visit: [
             {
                 userID: '41224d776a326fb40f000001',
                 spotID: '41224d776a326fb40f000023'
@@ -29,13 +29,13 @@ function userFixture(callback) {
         ]
     }, function(err) {
         if (err) {
-            console.log('Could not save visited-fixtures'.red, err);
+            console.log('Could not save visit-fixtures'.red, err);
         } else {
-            fixtures('Visited', function(err) {
+            fixtures('Visit', function(err) {
                 if (err) {
-                    console.log('Could not find visited spots fixtures'.red, err);
+                    console.log('Could not find visit spots fixtures'.red, err);
                 } else {
-                    console.log('Found visited spots fixtures into db!'.green);
+                    console.log('Found visit spots fixtures into db!'.green);
                 }
 
                 return callback(err);
