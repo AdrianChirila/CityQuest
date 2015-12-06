@@ -12,8 +12,6 @@ var colors = require('colors');
 var userController = function() {
 
     var add = function(req, res) {
-        console.log(req.body);
-        console.log(req.body.email, req.body.name);
         var user = new User({
             email: req.body.email,
             name: req.body.name
@@ -25,7 +23,7 @@ var userController = function() {
 
                 res.status(500).send();
             }
-            console.log('THe user was sent'.green, user);
+            console.log('THe user was sent'.green);
 
             res.status(200).json(user);
         });

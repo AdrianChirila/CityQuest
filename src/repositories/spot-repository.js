@@ -36,14 +36,11 @@ var SpotRepository = function() {
 
             var markSpots = [];
             async.each(spots, function(spot, callback) {
-                console.log('userID'.yellow, userID);
                 visitRepository.find(userID, spot._id,
                 function(err, visit) {
                     if (err) {
                         return callback(err)
                     }
-
-                    console.log(spot._id);
 
                     var markSpot = {
                         spot: spot,
